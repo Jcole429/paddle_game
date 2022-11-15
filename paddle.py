@@ -1,4 +1,5 @@
 from turtle import Turtle
+from constant import *
 
 
 class Paddle(Turtle):
@@ -7,7 +8,7 @@ class Paddle(Turtle):
         super().__init__()
         self.shape("square")
         self.color("white")
-        self.shapesize(stretch_wid=5, stretch_len=1)
+        self.shapesize(stretch_wid=PADDLE_STRETCH_WIDTH, stretch_len=PADDLE_STRETCH_LENGTH)
         self.penup()
         self.goto(xcor, ycor)
 
