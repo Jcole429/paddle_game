@@ -1,9 +1,10 @@
 from turtle import Screen
 from paddle import Paddle
+from constant import *
 
 screen = Screen()
 screen.bgcolor("black")
-screen.setup(width=800, height=600)
+screen.setup(width=SCREEN_WIDTH, height=SCREEN_HEIGHT)
 screen.title("Pong")
 # screen.tracer(0)
 
