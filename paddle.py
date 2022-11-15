@@ -3,7 +3,7 @@ from turtle import Turtle
 
 class Paddle(Turtle):
 
-    def __init__(self, xcor, ycor=0):
+    def __init__(self, xcor=0, ycor=0):
         super().__init__()
         self.shape("square")
         self.color("white")
