@@ -14,13 +14,17 @@ class Ball(Turtle):
         self.y_move = 10
 
     def move(self):
+        # Detect collision with wall
         if self.ycor() >= (SCREEN_HEIGHT / 2) - BALL_DIAMETER or self.ycor() <= (-SCREEN_HEIGHT / 2) + BALL_DIAMETER:
-            self.bounce()
+            self.bounce_y()
 
         new_x = self.xcor() + self.x_move
         new_y = self.ycor() + self.y_move
 
         self.goto(new_x, new_y)
 
-    def bounce(self):
+    def bounce_y(self):
         self.y_move *= -1
+
+    def bounce_x(self):
+        self.x_move *= -1

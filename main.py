@@ -26,6 +26,15 @@ game_is_on = True
 while game_is_on:
     time.sleep(0.1)
     screen.update()
+
+    # Detect collision with r_paddle
+    if ball.distance(r_paddle) < 50 and ball.xcor() >= r_paddle.xcor() - (BALL_DIAMETER / 2) - (PADDLE_LENGTH / 2):
+        ball.bounce_x()
+
+    # Detect collision with l_paddle
+    if ball.distance(l_paddle) < 50 and ball.xcor() <= l_paddle.xcor() + (BALL_DIAMETER / 2) + (PADDLE_LENGTH / 2):
+        ball.bounce_x()
+
     ball.move()
 
 screen.exitonclick()
