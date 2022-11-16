@@ -35,6 +35,10 @@ while game_is_on:
     if ball.distance(l_paddle) < 50 and ball.xcor() <= l_paddle.xcor() + (BALL_DIAMETER / 2) + (PADDLE_LENGTH / 2):
         ball.bounce_x()
 
+    # Detect out of bounds
+    if ball.xcor() >= (SCREEN_WIDTH / 2) or ball.xcor() <= (-SCREEN_WIDTH / 2):
+        ball.bounce_x()
+        ball.goto(0, 0)
     ball.move()
 
 screen.exitonclick()
