@@ -37,8 +37,8 @@ while game_is_on:
 
     # Detect out of bounds
     if ball.xcor() >= (SCREEN_WIDTH / 2) or ball.xcor() <= (-SCREEN_WIDTH / 2):
-        ball.bounce_x()
-        ball.goto(0, 0)
+        ball.reset_position()
+
     ball.move()
 
 screen.exitonclick()
